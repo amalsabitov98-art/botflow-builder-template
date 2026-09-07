@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      # npm run lint — это eslint --max-warnings=0 и tsc --noEmit.
+      - name: Lint and typecheck
+        run: npm run lint
+
+      - name: Tests
+        run: npm test
+
+      # Сборка проверяет, что фронтенд собирается тем же способом, что и в Docker.
+      - name: Build
+        run: npm run build
+
+      - name: Build production container
+        run: >-
+          docker build
+          --build-arg VITE_SUPABASE_URL=https://example.supabase.co
+          --build-arg VITE_SUPABASE_ANON_KEY=ci-placeholder
+          .

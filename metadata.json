@@ -1,0 +1,5 @@
+{
+  "name": "BotFlow Builder",
+  "description": "Visual chatbot flow builder analog to BotHelp.io",
+  "requestFramePermissions": []
+}

@@ -1,0 +1,35 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "dev"
+      ],
+      "port": 3000,
+      "autoPort": true
+    },
+    {
+      "name": "dev:local-login",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "run",
+        "dev:local-login"
+      ],
+      "port": 3000,
+      "autoPort": true
+    },
+    {
+      "name": "dev:isolated",
+      "runtimeExecutable": "sh",
+      "runtimeArgs": [
+        "-c",
+        "ALLOW_LIVE_SERVICES_IN_DEV=false VITE_ALLOW_LIVE_SERVICES_IN_DEV=false npm run dev:local-login"
+      ],
+      "port": 3000,
+      "autoPort": true
+    }
+  ]
+}

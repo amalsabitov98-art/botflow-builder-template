@@ -1,0 +1,16 @@
+node_modules/
+dist/
+coverage/
+.git/
+.DS_Store
+*.log
+
+.env
+.env.*
+!.env.example
+
+.claude/
+data/
+scratch/
+output/
+cloudflared.new

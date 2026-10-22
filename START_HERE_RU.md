@@ -78,3 +78,10 @@ node --import tsx/esm server.ts
 - Railway healthcheck: https://docs.railway.com/guides/healthchecks
 - Supabase API keys: https://supabase.com/docs/guides/api/api-keys
 
+## Статус проверки 22 октября 2026
+
+- Windows, Node.js 24.18.0: зависимости установлены; `npm run lint` и `npm run build` завершились успешно.
+- `npm test`: 257 успешных тестов в 29 файлах.
+- `npm audit`: 0 известных уязвимостей на момент проверки.
+- Локально проверены healthcheck, вход в админку и создание воронки с тремя этапами. Демо-данные остаются только на компьютере и не входят в репозиторий.
+- Облачный Docker-запуск, Supabase-вход, Telegram и реальные платежи пока не проверены: аккаунты и подключения ещё не настроены. Локальные проверки не означают готовность этих интеграций.

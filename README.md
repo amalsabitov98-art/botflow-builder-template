@@ -1,5 +1,7 @@
 # BotFlow Builder
 
+**Ваша копия проекта:** [начать с пошаговой инструкции на русском](START_HERE_RU.md) — локальный просмотр на Windows, Supabase, Telegram-бот и размещение в Railway.
+
 Конструктор Telegram-воронок с React/Vite админкой, Express API, Telegram WebApp-страницами, мультиботами, Supabase-хранилищем и интеграцией платежей Lava.top.
 
 ## Возможности
